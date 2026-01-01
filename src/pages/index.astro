@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import OfferCard from '../components/OfferCard.astro';
+import CertCard from '../components/CertCard.astro';
+
+const offers = [
+  {
+    title: "Diagnostic Flash",
+    subtitle: "L'essentiel pour les startups.",
+    price: "500 €",
+    duration: "Par mission (~2 Jours)",
+    icon: "fa-solid fa-bolt",
+    features: [
+      "Cartographie Web & API",
+      "Scan vulnérabilités automatisé",
+      "Vérification Top 10 OWASP",
+      "Rapport synthétique"
+    ],
+    ctaText: "Choisir ce pack"
+  },
+  {
+    title: "Pentest Intégral",
+    subtitle: "Simulation d'attaque réelle.",
+    price: "1500 €",
+    duration: "Par mission (~5 Jours)",
+    icon: "fa-solid fa-shield-halved",
+    highlighted: true,
+    badge: "Recommandé PME",
+    features: [
+      "Tout le pack Diagnostic",
+      "Exploitation manuelle (Black Box)",
+      "Recherche failles logiques",
+      "Rapport technique détaillé + PoC"
+    ],
+    ctaText: "Démarrer l'audit"
+  },
+  {
+    title: "Pack Sérénité",
+    subtitle: "Accompagnement & Garantie.",
+    price: "2500 €",
+    duration: "Par mission (~8 Jours)",
+    icon: "fa-solid fa-crown",
+    features: [
+      "Pentest Intégral inclus",
+      "Restitution orale aux équipes",
+      "Support correctif (Slack/Discord)",
+      "<strong class='text-white'>Retest de validation (J+30)</strong>"
+    ],
+    ctaText: "Devenir Partenaire"
+  }
+];
+
+const certifications = [
+  { icon: "fa-solid fa-graduation-cap", title: "eJPT", subtitle: "Junior Penetration Tester" },
+  { icon: "fa-solid fa-dragon", title: "OSCP", subtitle: "Offensive Security Certified Professional" },
+  { icon: "fa-solid fa-box-open", title: "HackTheBox", subtitle: "Top 10% Rank" },
+  { icon: "fa-solid fa-school", title: "Ynov Campus", subtitle: "Lab Partenaire" }
+];
+---
+
+<Layout>
+  <Header />
+  
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <!-- Glow effect -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold tracking-wide uppercase mb-6 animate-pulse">
+        <span class="w-2 h-2 rounded-full bg-primary mr-2"></span> Disponible pour mission
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+        La Cybersécurité Offensive <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent custom-cursor">Accessible aux PME</span>
+      </h1>
+      
+      <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+        Nous sommes PhanTom. Une Red Team d'élite issue d'Ynov Rouen. <br>
+        Nous trouvons vos failles avant qu'elles ne soient exploitées.
+      </p>
+      
+      <div class="mt-10 flex justify-center gap-4 flex-wrap">
+        <a href="#offres" class="px-8 py-4 bg-primary text-dark font-bold rounded-lg hover:bg-white transition-colors shadow-[0_0_20px_rgba(190,242,100,0.3)]">
+          Voir les Offres
+        </a>
+        <a href="#expertise" class="px-8 py-4 bg-transparent border border-gray-600 text-white font-medium rounded-lg hover:border-primary hover:text-primary transition-colors">
+          Notre Méthode
+        </a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="mt-20 grid grid-cols-2 gap-8 md:grid-cols-4 border-t border-white/10 pt-10">
+        <div>
+          <div class="text-3xl font-bold text-white">250€</div>
+          <div class="text-sm text-gray-500 mt-1">TJM Moyen</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white">OSCP</div>
+          <div class="text-sm text-gray-500 mt-1">Certification visée</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white">Web & Infra</div>
+          <div class="text-sm text-gray-500 mt-1">Périmètre d'audit</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white">Rouen</div>
+          <div class="text-sm text-gray-500 mt-1">Ancrage Local</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION OFFRES -->
+  <section id="offres" class="py-20 bg-card/50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Nos Solutions d'Audit</h2>
+        <p class="text-gray-400">Une approche certifiée, agile et transparente. Pas de coûts cachés.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {offers.map((offer) => (
+          <OfferCard {...offer} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION EXPERTISE -->
+  <section id="expertise" class="py-20 bg-dark border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Une équipe forgée par <br>
+            <span class="text-primary">l'excellence technique</span>
+          </h2>
+          <p class="text-gray-400 mb-6 text-lg">
+            Contrairement aux consultants classiques, nous sommes des "Digital Natives" de la sécurité. 
+            Notre quotidien ? Casser des machines sur <strong>HackTheBox</strong> et préparer les certifications les plus dures du marché.
+          </p>
+          <p class="text-gray-400 mb-8 text-lg">
+            Nous n'utilisons pas seulement des outils automatisés. Nous comprenons le code, l'infrastructure et la logique derrière chaque application.
+          </p>
+          
+          <div class="flex flex-wrap gap-3">
+            <span class="px-3 py-1 bg-gray-800 rounded text-xs text-gray-300 font-mono">OWASP Top 10</span>
+            <span class="px-3 py-1 bg-gray-800 rounded text-xs text-gray-300 font-mono">MITRE ATT&CK</span>
+            <span class="px-3 py-1 bg-gray-800 rounded text-xs text-gray-300 font-mono">Python/Bash</span>
+            <span class="px-3 py-1 bg-gray-800 rounded text-xs text-gray-300 font-mono">Active Directory</span>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 reveal">
+          {certifications.map((cert) => (
+            <CertCard {...cert} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CONTACT -->
+  <section id="contact" class="py-20 relative overflow-hidden">
+    <!-- Decoration -->
+    <div class="absolute right-0 bottom-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-bottom-right"></div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-card border border-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl reveal">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold text-white mb-4">Sécurisez votre activité <span class="text-primary">maintenant</span></h2>
+          <p class="text-gray-400">
+            Discutez directement avec l'équipe technique. <br>
+            Réponse sous 24h. Devis gratuit.
+          </p>
+        </div>
+
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Nom / Entreprise</label>
+              <input type="text" id="name" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Ex: Claire Martin">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Pro</label>
+              <input type="email" id="email" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="claire@entreprise.com">
+            </div>
+          </div>
+          
+          <div>
+            <label for="offre" class="block text-sm font-medium text-gray-400 mb-2">Offre souhaitée</label>
+            <select id="offre" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+              <option>Diagnostic Flash (500€)</option>
+              <option selected>Pentest Intégral (1500€)</option>
+              <option>Pack Sérénité (2500€)</option>
+              <option>Autre / Je ne sais pas</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Détails du projet</label>
+            <textarea id="message" rows="4" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Décrivez brièvement votre besoin (Site Web, API, Infra interne...)"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-primary text-dark font-bold py-4 rounded-lg hover:bg-white transition-colors shadow-lg">
+            Envoyer la demande
+          </button>
+          
+          <p class="text-xs text-center text-gray-500 mt-4">
+            Vos données restent confidentielles. Nous signons un NDA sur demande.
+          </p>
+        </form>
+      </div>
+      
+      <div class="mt-10 text-center">
+        <p class="text-gray-400 mb-2">Ou contactez-nous directement :</p>
+        <a href="mailto:contact@phantom-lab.fr" class="text-primary font-mono text-lg hover:underline">
+          <i class="fa-regular fa-envelope mr-2"></i>contact@phantom-lab.fr
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

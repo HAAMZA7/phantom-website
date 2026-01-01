@@ -1,0 +1,66 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "PhanTom - Laboratoire de Cybersécurité Offensive",
+  description = "La Red Team agile pour les PME Normandes. Pentest, audit et sécurisation offensive à tarif accessible."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Google Fonts: Urbanist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <style is:global>
+    @import '../styles/global.css';
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Background Effects -->
+  <div class="fixed inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
+  <div class="scanlines"></div>
+  
+  <slot />
+  
+  <!-- Reveal Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+
+      const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 100;
+
+        reveals.forEach((reveal) => {
+          const elementTop = reveal.getBoundingClientRect().top;
+          if (elementTop < windowHeight - elementVisible) {
+            reveal.classList.add('active');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+    });
+  </script>
+</body>
+</html>

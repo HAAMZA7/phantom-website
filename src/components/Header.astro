@@ -1,0 +1,76 @@
+---
+// Header component with navigation and mobile menu
+---
+
+<nav class="fixed w-full z-50 bg-dark/90 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="shrink-0">
+        <a href="#" class="text-3xl font-bold tracking-tighter text-white glitch-hover">
+          Phan<span class="text-primary">Tom</span>_
+        </a>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          <a href="#expertise" class="text-gray-300 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">
+            Expertise
+          </a>
+          <a href="#offres" class="text-gray-300 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">
+            Offres
+          </a>
+          <a href="#contact" class="bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-dark transition-all px-4 py-2 rounded-md text-sm font-bold">
+            Demander un Audit
+          </a>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <div class="-mr-2 flex md:hidden">
+        <button 
+          type="button" 
+          id="mobile-menu-btn"
+          class="bg-card inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+          aria-label="Menu principal"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div class="hidden md:hidden bg-card border-b border-white/10" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#expertise" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium mobile-link">
+        Expertise
+      </a>
+      <a href="#offres" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium mobile-link">
+        Offres
+      </a>
+      <a href="#contact" class="text-primary font-bold block px-3 py-2 rounded-md text-base mobile-link">
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+  
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+  
+  // Close menu on link click
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>
