@@ -1,46 +1,39 @@
-# Astro Starter Kit: Basics
+# 🔴 PhanTom - Red Team & Pentest
 
-```sh
-npm create astro@latest -- --template basics
-```
+> **La Cybersécurité Offensive Accessible aux PME**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Site vitrine de PhanTom, une Red Team d'élite issue d'Ynov Rouen. Nous trouvons vos failles avant qu'elles ne soient exploitées.
 
-## 🚀 Project Structure
+## 🎯 Services
 
-Inside of your Astro project, you'll see the following folders and files:
+| Offre | Prix | Durée |
+|-------|------|-------|
+| **Diagnostic Flash** | 500€ | ~2 jours |
+| **Pentest Intégral** | 1500€ | ~5 jours |
+| **Pack Sérénité** | 2500€ | ~8 jours |
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🛡️ Compétences
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- OWASP Top 10
+- MITRE ATT&CK
+- Python / Bash
+- Active Directory
+- eJPT & OSCP (certifications visées)
+- HackTheBox - Top 10% Rank
 
-## 🧞 Commands
+## 🛠️ Stack Technique
 
-All commands are run from the root of the project, from a terminal:
+- **Framework** : Astro
+- **Hébergement** : Hostinger
+- **Design** : CSS moderne, Dark theme
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📧 Contact
 
-## 👀 Want to learn more?
+- **Email** : contact@phantom-lab.fr
+- **Localisation** : Rouen, France
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+**YDays Project 2025 - Ynov Rouen**
+
+Made with ❤️ by [Hamza DJOUDI](https://djoudi.dev)
