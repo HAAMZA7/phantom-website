@@ -4,6 +4,8 @@
 
 Site vitrine de PhanTom, une Red Team d'élite issue d'Ynov Rouen. Nous trouvons vos failles avant qu'elles ne soient exploitées.
 
+🔗 **[Voir le site](https://phantom-cyber.vercel.app/)**
+
 ## 🎯 Services
 
 | Offre | Prix | Durée |
@@ -24,13 +26,14 @@ Site vitrine de PhanTom, une Red Team d'élite issue d'Ynov Rouen. Nous trouvons
 ## 🛠️ Stack Technique
 
 - **Framework** : Astro
-- **Hébergement** : Hostinger
+- **Hébergement** : Vercel
 - **Design** : CSS moderne, Dark theme
 
 ## 📧 Contact
 
 - **Email** : contact@phantom-lab.fr
 - **Localisation** : Rouen, France
+- **Site** : [phantom-cyber.vercel.app](https://phantom-cyber.vercel.app/)
 
 ---
 
