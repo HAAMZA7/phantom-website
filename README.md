@@ -37,6 +37,12 @@ Site vitrine de PhanTom, une Red Team d'élite issue d'Ynov Rouen. Nous trouvons
 
 ---
 
+## 📄 Licence
+
+© 2025 Hamza DJOUDI - Tous droits réservés.
+
+---
+
 **YDays Project 2025 - Ynov Rouen**
 
 Made with ❤️ by [Hamza DJOUDI](https://djoudi.dev)
