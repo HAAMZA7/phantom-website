@@ -4,7 +4,7 @@
 
 Site vitrine de PhanTom, une Red Team d'élite issue d'Ynov Rouen. Nous trouvons vos failles avant qu'elles ne soient exploitées.
 
-🔗 **[Voir le site](https://phantom-cyber.vercel.app/)**
+🔗 **[Voir le site](https://phantom.djoudi.dev/)**
 
 ## 🎯 Services
 
@@ -33,7 +33,7 @@ Site vitrine de PhanTom, une Red Team d'élite issue d'Ynov Rouen. Nous trouvons
 
 - **Email** : contact@phantom-lab.fr
 - **Localisation** : Rouen, France
-- **Site** : [phantom-cyber.vercel.app](https://phantom-cyber.vercel.app/)
+- **Site** : [phantom.djoudi.dev](https://phantom.djoudi.dev/)
 
 ---
 
